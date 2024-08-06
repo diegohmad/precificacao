@@ -34,8 +34,8 @@ public class Produto {
     }
 
     //calcular a taxa adicional, metodo chamará calcularTaxaAdicional
-    public double aplicarTaxaAdicional() {
-        return 50;
+    public double aplicarTaxaAdicional(double valor) {
+        return valor+= 50;
     }
 
     //calcular o preço final, metodo chamará calcularPrecoFinal
@@ -43,7 +43,7 @@ public class Produto {
         double desconto = this.calcularDesconto(cliente);
         double precoComDesconto = this.precoBase - desconto;
         double imposto = this.aplicarImposto(precoComDesconto);
-        double precoFinal = precoComDesconto + imposto + this.aplicarTaxaAdicional();
+        double precoFinal = aplicarTaxaAdicional(precoComDesconto + imposto);
 
         if (precoFinal < 0) {
             precoFinal = 0;
