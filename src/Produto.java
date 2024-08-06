@@ -34,7 +34,7 @@ public class Produto {
     }
 
     //calcular a taxa adicional, metodo chamará calcularTaxaAdicional
-    public double calcularTaxaAdicional() {
+    public double aplicarTaxaAdicional() {
         return 50;
     }
 
@@ -44,7 +44,7 @@ public class Produto {
         // System.out.println("Desconto: " + desconto);
         double imposto = this.aplicarImposto(cliente);
         // System.out.println("Imposto: " + imposto);
-        double taxaAdicional = this.calcularTaxaAdicional();
+        double taxaAdicional = this.aplicarTaxaAdicional();
         // System.out.println("Taxa adicional: " + taxaAdicional);
 
         double precoComDesconto = this.precoBase - desconto;
