@@ -29,7 +29,7 @@ public class Produto {
     }
 
     //calcular o imposto metodo chamará aplicarImposto
-    public double aplicarImposto(Cliente cliente) {
+    public double aplicarImposto() {
         return this.precoBase * 0.1;
     }
 
@@ -42,7 +42,7 @@ public class Produto {
     public double calcularPrecoFinal(Cliente cliente) {
         double desconto = this.calcularDesconto(cliente);
         // System.out.println("Desconto: " + desconto);
-        double imposto = this.aplicarImposto(cliente);
+        double imposto = this.aplicarImposto();
         // System.out.println("Imposto: " + imposto);
         double taxaAdicional = this.aplicarTaxaAdicional();
         // System.out.println("Taxa adicional: " + taxaAdicional);
